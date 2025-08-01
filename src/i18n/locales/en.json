@@ -1,0 +1,100 @@
+{
+  "navbar": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Work Experience",
+    "education": "Education",
+    "about": "About Me",
+    "contact": "Contact",
+    "language": "Language",
+    "spanish": "Spanish",
+    "english": "English"
+  },
+  "header": {
+    "greeting": "Hello, I'm",
+    "name": "Yeray Zafra",
+    "description": "Full Stack Developer passionate about creating innovative and efficient web solutions.",
+    "soloProjects": "solo projects",
+    "yearsProgramming": "years programming",
+    "startButton": "GET STARTED",
+    "curriculum": "Resume",
+    "cvButton": "Resume",
+    "linkedinButton": "LinkedIn",
+    "contactButton": "Contact Me",
+    "cvPreview": "CV Preview",
+    "cvDescription": "Here the resume will be displayed",
+    "downloadCV": "Download CV"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies I master",
+    "contactButton": "Contact Me"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Some of my recent work",
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile",
+    "backend": "Backend",
+    "viewMore": "View more projects",
+    "showLess": "Show less"
+  },
+  "timeline": {
+    "experience": "Work Experience",
+    "education": "Education",
+    "clickToSeeMore": "Click to see more details",
+    "learnings": "Learnings"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "greeting": "Hello, I'm",
+    "description1": "I'm a web developer passionate about creating exceptional digital experiences. With over 2 years of experience in full-stack development, I specialize in modern technologies like Vue.js, Laravel, and Node.js.",
+    "description2": "My approach focuses on writing clean, scalable, and maintainable code, always seeking best practices and the latest trends in web development. I love working in teams and facing new challenges that allow me to grow professionally.",
+    "specialties": {
+      "title": "Specialties",
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "apis": "RESTful APIs",
+      "databases": "Databases"
+    },
+    "interests": {
+      "title": "Interests",
+      "newTech": "New Technologies",
+      "openSource": "Open Source",
+      "agile": "Agile Methodologies",
+      "optimization": "Web Optimization"
+    },
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "footer": {
+    "name": "Yeray Zafra",
+    "description": "Full Stack Developer passionate about creating innovative and efficient web solutions.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "sendEmail": "Send an email",
+    "curriculum": "Resume",
+    "aboutMe": "+ about me",
+    "copyright": "All rights reserved.",
+    "cvModal": {
+      "title": "Download Resume",
+      "description": "Choose your preferred language:",
+      "downloadSpanish": "Descargar CV en Español",
+      "downloadEnglish": "Download CV in English"
+    },
+    "aboutModal": {
+      "title": "More about me",
+      "myStory": "My Story",
+      "storyText": "I started my journey in web development over 2 years ago, motivated by the passion to create digital solutions that positively impact people's lives. My approach has always been continuous learning and the pursuit of technical excellence.",
+      "workPhilosophy": "Work Philosophy",
+      "philosophyText": "I firmly believe in clean code, good practices and collaborative work. Each project is an opportunity to learn something new and contribute to team growth.",
+      "whenNotCoding": "When I'm not coding...",
+      "hobbiesText": "I enjoy exploring new technologies, reading about web development trends, and contributing to open source projects. I also like sports and spending time outdoors."
+    }
+  },
+  "whatsapp": {
+    "contactMe": "Contact Me"
+  }
+}

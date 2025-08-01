@@ -1,26 +1,294 @@
 <template>
-  <section class="py-5 container">
-    <h2 class="mb-4">Proyectos</h2>
-    <div class="d-flex gap-2 mb-3">
-      <button class="btn btn-sm btn-outline-primary">All</button>
-      <button class="btn btn-sm btn-outline-secondary">Vue</button>
-      <button class="btn btn-sm btn-outline-success">React</button>
+  <!-- 
+    Componente Projects: Sección de proyectos del portfolio
+    - Sistema de filtrado por tags tecnológicos
+    - Cards de proyectos con videos embebidos de Vimeo
+    - Efectos hover en cards y videos
+    - Botón "Ver más proyectos" funcional
+    - Diseño responsive con grid de Bootstrap
+  -->
+  <section id="projects" class="py-5 container">
+    <h2 class="mb-5 text-center">Proyectos</h2>
+    
+    <!-- Sistema de filtros por tecnologías -->
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+      <span 
+        class="badge rounded-pill tag-filter"
+        :class="selectedTags.length === 0 ? 'bg-primary text-white' : 'bg-light text-dark border'"
+        @click="clearFilter()"
+        role="button"
+        style="cursor: pointer;"
+      >
+        {{ $t('projects.all') }}
+      </span>
+      <span 
+        v-for="tag in availableTags" 
+        :key="tag"
+        class="badge rounded-pill tag-filter"
+        :class="selectedTags.includes(tag) ? 'bg-success text-white' : 'bg-secondary text-light border-light'"
+        @click="toggleTag(tag)"
+        role="button"
+        style="cursor: pointer;"
+      >
+        {{ tag }}
+        <i v-if="selectedTags.includes(tag)" class="bi bi-check-circle-fill ms-1"></i>
+      </span>
     </div>
+    
+    <!-- Grid responsive de proyectos -->
     <div class="row gy-4">
-      <div class="col-md-4" v-for="n in 6" :key="n">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Proyecto placeholder">
-          <div class="card-body">
-            <h5 class="card-title">Proyecto {{ n }}</h5>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-            </p>
+      <div 
+        class="col-lg-4 col-md-6" 
+        v-for="project in displayedProjects" 
+        :key="project.id"
+      >
+        <div class="card h-100 project-card bg-dark text-light border-secondary">
+          <!-- Contenedor de video embebido de Vimeo -->
+          <div class="video-container position-relative overflow-hidden">
+            <iframe
+              :src="project.videoUrl"
+              class="card-img-top video-iframe"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              :title="project.title"
+            ></iframe>
           </div>
-          <div class="card-footer">
-            <small class="text-muted">#Vue #Bootstrap</small>
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+          </div>
+          <!-- Tags de tecnologías utilizadas -->
+          <div class="card-footer bg-dark border-secondary">
+            <div class="d-flex flex-wrap gap-1">
+              <small 
+                v-for="tag in project.tags" 
+                :key="tag"
+                class="badge bg-success"
+              >
+                #{{ tag }}
+              </small>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    
+    <!-- Botón para mostrar más proyectos -->
+    <div class="text-center mt-5" v-if="!showAll && filteredProjects.length > 6">
+      <button class="btn btn-outline-success btn-lg" @click="showAll = true">
+        Ver más proyectos
+      </button>
+    </div>
   </section>
 </template>
+
+<script>
+import { inject, ref, computed } from 'vue'
+
+/**
+ * Componente Projects
+ * 
+ * Muestra una galería de proyectos con las siguientes funcionalidades:
+ * - Sistema de filtrado por tecnologías/tags
+ * - Cards de proyectos con videos embebidos de Vimeo
+ * - Efectos hover en cards y videos para mejor interacción
+ * - Paginación con botón "Ver más proyectos"
+ * - Diseño responsive adaptable a diferentes pantallas
+ * - Diseño oscuro fijo
+ * 
+ * Características técnicas:
+ * - Filtrado reactivo de proyectos
+ * - Lazy loading de contenido
+ * - Efectos CSS para mejorar UX
+ */
+export default {
+  name: 'Projects',
+  setup() {
+    const selectedTags = ref([]) // Array de tags seleccionados para filtrar
+    const showAll = ref(false) // Flag para mostrar todos los proyectos o solo los primeros 6
+    
+    // Array de proyectos con datos placeholder
+    const projects = ref([
+      {
+        id: 1,
+        title: 'E-commerce Platform',
+        description: 'Plataforma de comercio electrónico completa con panel de administración y sistema de pagos.',
+        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e', // Video placeholder de Vimeo
+        tags: ['Laravel', 'Vue.js', 'MySQL']
+      },
+      {
+        id: 2,
+        title: 'Task Management App',
+        description: 'Aplicación de gestión de tareas con funcionalidades colaborativas y notificaciones en tiempo real.',
+        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        tags: ['Vue.js', 'Node.js', 'MongoDB']
+      },
+      {
+        id: 3,
+        title: 'Portfolio Website',
+        description: 'Sitio web de portfolio responsive con animaciones y diseño moderno.',
+        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        tags: ['Vue.js', 'Bootstrap', 'CSS']
+      },
+      {
+        id: 4,
+        title: 'Blog CMS',
+        description: 'Sistema de gestión de contenidos para blogs con editor WYSIWYG y SEO optimizado.',
+        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        tags: ['Laravel', 'PHP', 'MySQL']
+      },
+      {
+        id: 5,
+        title: 'Weather App',
+        description: 'Aplicación del clima con geolocalización y pronósticos extendidos.',
+        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        tags: ['JavaScript', 'API', 'CSS']
+      },
+      {
+        id: 6,
+        title: 'Chat Application',
+        description: 'Aplicación de chat en tiempo real con salas privadas y públicas.',
+        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        tags: ['Node.js', 'Socket.io', 'Vue.js']
+      },
+      {
+        id: 7,
+        title: 'Inventory System',
+        description: 'Sistema de inventario para pequeñas empresas con reportes y alertas.',
+        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        tags: ['Laravel', 'Vue.js', 'MySQL']
+      },
+      {
+        id: 8,
+        title: 'Social Media Dashboard',
+        description: 'Dashboard para gestión de redes sociales con analytics y programación de posts.',
+        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        tags: ['React', 'Node.js', 'API']
+      }
+    ])
+    
+    /**
+     * Obtiene todos los tags únicos disponibles de todos los proyectos
+     * @returns {Array} Array de tags únicos
+     */
+    const availableTags = computed(() => {
+      const tags = new Set()
+      projects.value.forEach(project => {
+        project.tags.forEach(tag => tags.add(tag))
+      })
+      return Array.from(tags)
+    })
+    
+    /**
+     * Filtra los proyectos basado en los tags seleccionados
+     * @returns {Array} Array de proyectos filtrados
+     */
+    const filteredProjects = computed(() => {
+      if (selectedTags.value.length === 0) {
+        return projects.value
+      }
+      return projects.value.filter(project => 
+        selectedTags.value.some(tag => project.tags.includes(tag))
+      )
+    })
+    
+    /**
+     * Determina qué proyectos mostrar basado en el estado showAll
+     * @returns {Array} Array de proyectos a mostrar (máximo 6 si showAll es false)
+     */
+    const displayedProjects = computed(() => {
+      if (showAll.value) {
+        return filteredProjects.value
+      }
+      return filteredProjects.value.slice(0, 6)
+    })
+    
+    /**
+     * Alterna la selección de un tag específico
+     * @param {string} tag - Tag a alternar
+     */
+    const toggleTag = (tag) => {
+      const index = selectedTags.value.indexOf(tag)
+      if (index > -1) {
+        selectedTags.value.splice(index, 1)
+      } else {
+        selectedTags.value.push(tag)
+      }
+      showAll.value = false // Resetear la vista al filtrar
+    }
+    
+    /**
+     * Limpia todos los filtros y muestra todos los proyectos
+     */
+    const clearFilter = () => {
+      selectedTags.value = []
+      showAll.value = false // Resetear la vista al limpiar filtros
+    }
+    
+    return {
+      projects,
+      selectedTags,
+      showAll,
+      availableTags,
+      filteredProjects,
+      displayedProjects,
+      toggleTag,
+      clearFilter
+    }
+  }
+}
+</script>
+
+<style scoped>
+.project-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.video-container {
+  height: 200px;
+  position: relative;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .video-iframe {
+  transform: scale(1.05);
+}
+
+.tag-filter {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.tag-filter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+</style>
