@@ -31,13 +31,6 @@
         </div>
       </div>
     </div>
-    
-    <!-- Botón de contacto con efecto hover -->
-    <div class="text-center mt-5">
-      <a href="#" class="btn btn-lg contact-btn dark-contact-btn">
-        <i class="bi bi-envelope me-2"></i>{{ $t('skills.contactButton') }}
-      </a>
-    </div>
   </section>
 </template>
 
@@ -68,11 +61,8 @@ export default {
     
     // Lista de habilidades ordenadas de mayor a menor porcentaje
     const skills = ref([
-      { name: 'JavaScript', percent: 90, animatedPercent: 0 },
       { name: 'Vue.js', percent: 85, animatedPercent: 0 },
-      { name: 'Bootstrap', percent: 85, animatedPercent: 0 },
       { name: 'Laravel', percent: 80, animatedPercent: 0 },
-      { name: 'PHP', percent: 80, animatedPercent: 0 },
       { name: 'Node.js', percent: 75, animatedPercent: 0 },
       { name: 'MySQL/MariaDB', percent: 70, animatedPercent: 0 },
       { name: 'MongoDB', percent: 65, animatedPercent: 0 }
@@ -161,20 +151,5 @@ export default {
 
 .skill-percent {
   transition: color 0.3s ease;
-}
-
-.dark-contact-btn {
-  background-color: #28a745;
-  color: #f8f9fa;
-  border: none;
-  transition: all 0.3s ease;
-  padding: 12px 30px;
-  font-weight: 500;
-}
-
-.dark-contact-btn:hover {
-  background-color: #1e7e34 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
 }
 </style>

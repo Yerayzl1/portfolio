@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background: rgba(26, 26, 46, 0.95); backdrop-filter: blur(10px);">
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="backdrop-filter: blur(10px);">
     <div class="container d-flex align-items-center">
       <!-- Logo a la izquierda -->
       <a class="navbar-brand me-3" href="#" @click="scrollToTop" style="cursor: pointer;">
-        <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=YZ" alt="Logo Yeray Zafra" width="40" height="40" class="d-inline-block align-text-top rounded-circle">
+        <img src="https://www.yerayzafra.com/wp-content/uploads/2025/04/logo-yeray-sin-letra-blanco-1.webp" alt="Logo Yeray Zafra" width="40" height="40" class="d-inline-block align-text-top">
       </a>
 
       <!-- Botón toggler para móvil -->
@@ -56,7 +56,7 @@
         <a href="https://linkedin.com/in/yerayzafra" target="_blank" class="me-3 text-light social-icon" title="LinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
-        <a href="https://github.com/yerayzafra" target="_blank" class="me-3 text-light social-icon" title="GitHub">
+        <a href="https://github.com/Yerayzl1" target="_blank" class="me-3 text-light social-icon" title="GitHub">
           <i class="bi bi-github"></i>
         </a>
         <a href="mailto:management@yerayzafra.com" class="text-light social-icon" title="Email">
@@ -70,6 +70,7 @@
 <script>
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { saveLocale } from '../i18n/index.js'
 
 export default {
   name: 'Navbar',
@@ -88,14 +89,14 @@ export default {
     })
     
     /**
-     * Cambia el idioma de la aplicación
+     * Cambia el idioma de la aplicación y lo guarda en localStorage
      * @param {string} lang - Código del idioma (es, en)
      */
     const changeLanguage = (lang) => {
        if (languages[lang]) {
          locale.value = lang
-         // Guardar preferencia en localStorage
-         localStorage.setItem('preferred-language', lang)
+         // Guardar preferencia en localStorage usando la función del i18n
+         saveLocale(lang)
        }
      }
      
@@ -165,11 +166,6 @@ export default {
 
 .nav-link:hover::after {
   width: 80%;
-}
-
-.navbar-brand img {
-  transition: transform 0.3s ease;
-  border: 2px solid #28a745;
 }
 
 .navbar-brand:hover img {

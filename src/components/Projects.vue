@@ -8,7 +8,7 @@
     - Diseño responsive con grid de Bootstrap
   -->
   <section id="projects" class="py-5 container">
-    <h2 class="mb-5 text-center">Proyectos</h2>
+    <h2 class="mb-5 text-center">{{ $t('projects.title') }}</h2>
     
     <!-- Sistema de filtros por tecnologías -->
     <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
@@ -77,7 +77,7 @@
     <!-- Botón para mostrar más proyectos -->
     <div class="text-center mt-5" v-if="!showAll && filteredProjects.length > 6">
       <button class="btn btn-outline-success btn-lg" @click="showAll = true">
-        Ver más proyectos
+        {{ $t('projects.viewMore') }}
       </button>
     </div>
   </section>
@@ -112,23 +112,23 @@ export default {
     const projects = ref([
       {
         id: 1,
-        title: 'E-commerce Platform',
-        description: 'Plataforma de comercio electrónico completa con panel de administración y sistema de pagos.',
-        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e', // Video placeholder de Vimeo
+        title: 'Gestión de vehículos - Tunateca Balfegó Espai Gastronòmic',
+        description: 'Primera versión de un panel de control de parking con entradas, salidas, grupos, usuarios, vehículos y restricciones varias...',
+        videoUrl: 'https://player.vimeo.com/video/1106698573',
         tags: ['Laravel', 'Vue.js', 'MySQL']
       },
       {
         id: 2,
-        title: 'Task Management App',
-        description: 'Aplicación de gestión de tareas con funcionalidades colaborativas y notificaciones en tiempo real.',
-        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
-        tags: ['Vue.js', 'Node.js', 'MongoDB']
+        title: 'Plataforma de desvios - Top Doctors',
+        description: 'Segunda versión de un panel de gestión de pacientes y doctores con gestión de teléfono, descansos, consultas, estadísticas...',
+        videoUrl: 'https://player.vimeo.com/video/1106698589',
+        tags: ['Laravel', 'Vue.js', 'MySQL']
       },
       {
         id: 3,
-        title: 'Portfolio Website',
-        description: 'Sitio web de portfolio responsive con animaciones y diseño moderno.',
-        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        title: 'Flowchart',
+        description: 'Visualiza tus ideas con Vue Flow, un diagrama de flujo Vue3 altamente personalizable... El componente Vue 3 personalizable que aporta interactividad a los diagramas de flujo y gráficos.',
+        videoUrl: 'https://player.vimeo.com/video/1106698580',
         tags: ['Vue.js', 'Bootstrap', 'CSS']
       },
       {

@@ -37,19 +37,42 @@ const messages = {
 }
 
 /**
+ * Función para obtener el idioma guardado en localStorage
+ * Si no existe, devuelve el idioma por defecto (español)
+ */
+function getSavedLocale() {
+  const savedLocale = localStorage.getItem('portfolio-language')
+  // Verificar que el idioma guardado sea válido
+  if (savedLocale && ['es', 'en'].includes(savedLocale)) {
+    return savedLocale
+  }
+  return 'es' // Idioma por defecto
+}
+
+/**
+ * Función para guardar el idioma en localStorage
+ * @param {string} locale - Código del idioma ('es' o 'en')
+ */
+export function saveLocale(locale) {
+  if (['es', 'en'].includes(locale)) {
+    localStorage.setItem('portfolio-language', locale)
+  }
+}
+
+/**
  * Instancia de Vue I18n configurada
  * 
  * Configuración:
  * - legacy: false -> Habilita Composition API
- * - locale: 'es' -> Idioma por defecto (español)
+ * - locale: getSavedLocale() -> Idioma guardado en localStorage o español por defecto
  * - fallbackLocale: 'en' -> Si falta traducción, usar inglés
  * - messages -> Objeto con todas las traducciones
  */
 const i18n = createI18n({
-  legacy: false,        // Usar Composition API en lugar de Options API
-  locale: 'es',         // Idioma por defecto: español
-  fallbackLocale: 'en', // Idioma de respaldo: inglés
-  messages              // Traducciones importadas
+  legacy: false,              // Usar Composition API en lugar de Options API
+  locale: getSavedLocale(),   // Idioma guardado en localStorage
+  fallbackLocale: 'en',       // Idioma de respaldo: inglés
+  messages                    // Traducciones importadas
 })
 
 export default i18n

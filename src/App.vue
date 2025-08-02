@@ -174,12 +174,7 @@ body {
   color: #f8f9fa;
 }
 
-.navbar {
-  background: rgba(26, 26, 46, 0.95) !important;
-}
-
 .navbar.sticky {
-  background: rgba(26, 26, 46, 0.98) !important;
   backdrop-filter: blur(10px);
 }
 

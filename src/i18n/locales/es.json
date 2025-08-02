@@ -74,11 +74,13 @@
     "curriculum": "Currículum",
     "aboutMe": "+ sobre mí",
     "copyright": "Todos los derechos reservados.",
+    "downloadCV": "Descargar CV",
+    "moreInfo": "Más Info",
     "cvModal": {
       "title": "Descargar Currículum",
-      "description": "Elige el idioma de tu preferencia:",
-      "downloadSpanish": "Descargar CV en Español",
-      "downloadEnglish": "Download CV in English"
+      "selectLanguage": "Seleccionar idioma:",
+      "spanish": "Español",
+      "english": "Inglés"
     },
     "aboutModal": {
       "title": "Más sobre mí",

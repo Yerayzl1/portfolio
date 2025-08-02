@@ -10,7 +10,7 @@
   <section class="py-5 container">
     <!-- Sección de Experiencia Laboral -->
     <div id="experience" class="mb-5">
-      <h2 class="mb-5 text-center">Experiencia laboral</h2>
+      <h2 class="mb-5 text-center">{{ $t('timeline.experience') }}</h2>
       <div class="timeline-container position-relative">
         <div class="timeline-line position-absolute" ref="experienceLine"></div>
         <div class="timeline-progress timeline-progress-experience position-absolute" ref="experienceProgress"></div>
@@ -51,7 +51,7 @@
 
     <!-- Sección de Estudios -->
     <div id="studies">
-      <h2 class="mb-5 text-center">Estudios</h2>
+      <h2 class="mb-5 text-center">{{ $t('timeline.education') }}</h2>
       <div class="timeline-container position-relative">
         <div class="timeline-line position-absolute" ref="studiesLine"></div>
         <div class="timeline-progress timeline-progress-studies position-absolute" ref="studiesProgress"></div>
@@ -188,45 +188,35 @@ export default {
     // Datos de experiencia laboral con información placeholder
     const exp = [
       {
-        title: 'Desarrollador Full Stack',
+        title: 'Desarrollador Web',
         company: 'Netcom Comunicaciones S.L.',
-        period: '2022 - Presente',
-        desc: 'Desarrollo de aplicaciones web completas utilizando Laravel, Vue.js y MySQL. Implementación de APIs RESTful y optimización de bases de datos.',
+        period: '2023 - Presente',
+        desc: 'Desarrollador web dedicado a crear aplicaciones desde cero para clientes. Desarrollando diagramas, wireframes, documentación interna y externa, la parte frontal y la parte trasera de cada aplicación.',
         learnings: [
-          'Desarrollo de APIs RESTful con Laravel',
-          'Implementación de autenticación JWT',
-          'Optimización de consultas SQL complejas',
-          'Integración de sistemas de pago',
-          'Metodologías ágiles (Scrum)',
-          'Trabajo en equipo multidisciplinario'
+          'HTML5',
+          'TypeScript',
+          'MySQL',
+          'Node.js',
+          'Express.js',
+          'MongoDB',
+          'JavaScript',
+          'Vue.js',
+          'Git'
         ]
       },
       {
-        title: 'Desarrollador Frontend',
-        company: 'TechStart Solutions',
-        period: '2021 - 2022',
-        desc: 'Creación de interfaces de usuario responsivas con Vue.js y Bootstrap. Colaboración en proyectos ágiles y optimización de rendimiento web.',
+        title: 'Técnico especialista en Sistemas Microinformáticos y Redes/TI Helpdesk',
+        company: 'Silgan Dispensing Systems Covit Europe S.L',
+        period: '2022 - 2023',
+        desc: 'Mantenimiento y ayudante de operaciones sobre Sistemas Microinformáticos y Redes como Centro de Atención al Usuario (20 horas/semana).',
         learnings: [
-          'Desarrollo con Vue.js y Composition API',
-          'Diseño responsive con Bootstrap',
-          'Optimización de rendimiento web',
-          'Testing unitario con Jest',
-          'Control de versiones con Git',
-          'Colaboración en equipos ágiles'
-        ]
-      },
-      {
-        title: 'Becario de Desarrollo',
-        company: 'Sligar Systems',
-        period: '2020 - 2021',
-        desc: 'Primeros pasos en el desarrollo web, aprendizaje de tecnologías modernas y participación en proyectos de pequeña escala.',
-        learnings: [
-          'Fundamentos de HTML, CSS y JavaScript',
-          'Introducción a frameworks modernos',
-          'Conceptos básicos de bases de datos',
-          'Metodologías de desarrollo',
-          'Resolución de problemas técnicos',
-          'Trabajo en entorno profesional'
+          'Linux',
+          'Servicio de soporte técnico',
+          'Internet Information Services (IIS)',
+          'Windows',
+          'Resolución de incidencias',
+          'Destreza tecnológica',
+          'Resolución de problemas'
         ]
       }
     ]
@@ -235,9 +225,9 @@ export default {
     const studies = [
       {
         title: 'Desarrollo de Aplicaciones Web',
-        institution: 'Institut Granollers',
-        period: '2020 - 2022',
-        desc: 'Formación especializada en desarrollo web moderno, incluyendo frameworks JavaScript, bases de datos y metodologías ágiles.',
+        institution: 'Institut Cirviànum de Torelló',
+        period: '2023 - 2025',
+        desc: 'El Grado Superior en Desarrollo de Aplicaciones Web (DAW) es un ciclo formativo de Formación Profesional que capacita a los estudiantes para desarrollar, implantar y mantener aplicaciones informáticas en entornos web.',
         learnings: [
           'Programación con JavaScript ES6+',
           'Desarrollo con frameworks (Vue.js, React)',
@@ -249,9 +239,9 @@ export default {
       },
       {
         title: 'Sistemas Microinformáticos y Redes',
-        institution: 'Institut Granollers',
-        period: '2018 - 2020',
-        desc: 'Fundamentos de informática, redes, sistemas operativos y bases de la programación. Primera toma de contacto con el mundo tecnológico.',
+        institution: 'Institut Cirviànum de Torelló',
+        period: '2021 - 2023',
+        desc: 'El Grado Medio en Sistemas Microinformáticos y Redes (SMX) es un ciclo formativo de Formación Profesional que prepara a los estudiantes para instalar, configurar y mantener sistemas informáticos y redes locales en entornos pequeños.',
         learnings: [
           'Administración de sistemas Windows/Linux',
           'Configuración de redes TCP/IP',

@@ -14,12 +14,12 @@
         <!-- Sección de información personal -->
         <div class="col-lg-6 mb-4">
           <h5 class="text-success mb-3">Yeray Zafra</h5>
-          <p class="mb-3">Desarrollador Full Stack especializado en Vue.js y Laravel. Creando experiencias web excepcionales desde Barcelona.</p>
+          <p class="mb-3">{{ $t('footer.description') }}</p>
           <div class="d-flex gap-3">
-            <a href="https://linkedin.com" target="_blank" class="text-success">
+            <a href="https://linkedin.com/in/yerayzafra" target="_blank" class="text-success">
               <i class="bi bi-linkedin fs-4"></i>
             </a>
-            <a href="https://github.com" target="_blank" class="text-success">
+            <a href="https://github.com/Yerayzl1" target="_blank" class="text-success">
               <i class="bi bi-github fs-4"></i>
             </a>
             <a href="mailto:management@yerayzafra.com" class="text-success">
@@ -30,28 +30,28 @@
         
         <!-- Sección de acciones y contacto -->
         <div class="col-lg-6">
-          <h5 class="mb-3">Contacto</h5>
+          <h5 class="mb-3">{{ $t('footer.contact') }}</h5>
           <div class="d-flex flex-column gap-2">
             <!-- Botón para enviar email directo -->
             <button 
               class="btn btn-outline-success text-start" 
               @click="sendEmail"
             >
-              <i class="bi bi-envelope me-2"></i>Enviar un mail
+              <i class="bi bi-envelope me-2"></i>{{ $t('footer.sendEmail') }}
             </button>
             <!-- Botón para modal de descarga de CV -->
             <button 
               class="btn btn-outline-success text-start" 
               @click="showCurriculumModal = true"
             >
-              <i class="bi bi-file-earmark-pdf me-2"></i>Currículum
+              <i class="bi bi-file-earmark-pdf me-2"></i>{{ $t('footer.downloadCV') }}
             </button>
             <!-- Botón para modal con información adicional -->
             <button 
               class="btn btn-outline-success text-start" 
               @click="showAboutModal = true"
             >
-              <i class="bi bi-info-circle me-2"></i>+ sobre mí
+              <i class="bi bi-info-circle me-2"></i>{{ $t('footer.moreInfo') }}
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@
       <hr class="my-4">
       
       <div class="text-center">
-        <p class="mb-0">&copy; 2024 Yeray Zafra. Todos los derechos reservados.</p>
+        <p class="mb-0">{{ $t('footer.copyright') }}</p>
       </div>
     </div>
     
@@ -76,33 +76,36 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content bg-dark text-light">
           <div class="modal-header">
-            <h5 class="modal-title">Currículum - Yeray Zafra</h5>
-            <button 
-                type="button" 
-                class="btn-close btn-close-white"
-                @click="showCurriculumModal = false"
-              ></button>
+            <h5 class="modal-title">
+              <i class="bi bi-file-earmark-text me-2"></i>{{ $t('footer.cvModal.title') }}
+            </h5>
+            <div class="d-flex align-items-center gap-2">
+              <button 
+                  type="button" 
+                  class="btn-close btn-close-white"
+                  @click="showCurriculumModal = false"
+                ></button>
+            </div>
           </div>
           <div class="modal-body text-center">
             <div class="mb-4">
               <i class="bi bi-file-earmark-pdf text-success" style="font-size: 4rem;"></i>
             </div>
-            <h6 class="mb-3">Descargar Currículum</h6>
-            <p class="mb-4">Selecciona el idioma de tu preferencia:</p>
+            <h6 class="mb-3">{{ $t('footer.cvModal.selectLanguage') }}</h6>
             <div class="d-flex justify-content-center gap-3">
               <a 
                 href="#" 
                 class="btn btn-success"
                 download="CV_Yeray_Zafra_ES.pdf"
               >
-                <span class="me-2">🇪🇸</span>Español
+                <span class="me-2">🇪🇸</span>{{ $t('footer.cvModal.spanish') }}
               </a>
               <a 
                 href="#" 
                 class="btn btn-outline-success"
                 download="CV_Yeray_Zafra_EN.pdf"
               >
-                <span class="me-2">🇬🇧</span>English
+                <span class="me-2">🇬🇧</span>{{ $t('footer.cvModal.english') }}
               </a>
             </div>
           </div>
@@ -121,12 +124,16 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content bg-dark text-light">
           <div class="modal-header">
-            <h5 class="modal-title">Más sobre mí</h5>
-            <button 
-              type="button" 
-              class="btn-close btn-close-white" 
-              @click="showAboutModal = false"
-            ></button>
+            <h5 class="modal-title">
+              <i class="bi bi-person-circle me-2"></i>{{ $t('footer.aboutModal.title') }}
+            </h5>
+            <div class="d-flex align-items-center gap-2">
+              <button 
+                type="button" 
+                class="btn-close btn-close-white" 
+                @click="showAboutModal = false"
+              ></button>
+            </div>
           </div>
           <div class="modal-body">
             <div class="row">
@@ -142,24 +149,19 @@
               </div>
               
               <div class="col-md-8">
-                <h6 class="text-success mb-3">Mi Historia</h6>
+                <h6 class="text-success mb-3">{{ $t('footer.aboutModal.myStory') }}</h6>
                 <p class="mb-3">
-                  Comencé mi viaje en el desarrollo web hace más de 2 años, motivado por la 
-                  pasión de crear soluciones digitales que impacten positivamente en la vida 
-                  de las personas.
+                  {{ $t('footer.aboutModal.storyText') }}
                 </p>
                 
-                <h6 class="text-success mb-3">Filosofía de Trabajo</h6>
+                <h6 class="text-success mb-3">{{ $t('footer.aboutModal.workPhilosophy') }}</h6>
                 <p class="mb-3">
-                  Creo firmemente en el código limpio, las buenas prácticas y el aprendizaje 
-                  continuo. Cada proyecto es una oportunidad para crecer y aportar valor.
+                  {{ $t('footer.aboutModal.philosophyText') }}
                 </p>
                 
-                <h6 class="text-success mb-3">Cuando no estoy programando...</h6>
+                <h6 class="text-success mb-3">{{ $t('footer.aboutModal.goals') }}</h6>
                 <p class="mb-0">
-                  Me gusta explorar nuevas tecnologías, contribuir a proyectos de código abierto, 
-                  y mantenerme al día con las últimas tendencias en desarrollo web. También 
-                  disfruto de la fotografía y los viajes.
+                  {{ $t('footer.aboutModal.goalsText') }}
                 </p>
               </div>
             </div>
@@ -178,6 +180,8 @@
 
 <script>
 import { inject, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { saveLocale } from '../i18n/index.js'
 
 /**
  * Componente Footer
@@ -205,17 +209,36 @@ import { inject, ref } from 'vue'
 export default {
   name: 'Footer',
   setup() {
+    const darkMode = inject('darkMode')
+    const { t, locale } = useI18n()
     const showCurriculumModal = ref(false)
     const showAboutModal = ref(false)
+    
+    const downloadCV = (language) => {
+      // Placeholder para descarga de CV en el idioma seleccionado
+      const languageName = language === 'es' ? t('footer.cvModal.spanish') : t('footer.cvModal.english')
+      alert(t('footer.cvModal.downloadAlert', { language: languageName }))
+      
+      // Cerrar modal
+      showCurriculumModal.value = false
+    }
     
     const sendEmail = () => {
       window.location.href = 'mailto:management@yerayzafra.com?subject=Contacto desde Portfolio&body=Hola Yeray,%0D%0A%0D%0AMe gustaría ponerme en contacto contigo...'
     }
     
+    const changeLanguage = (newLocale) => {
+      locale.value = newLocale
+      saveLocale(newLocale)
+    }
+    
     return {
       showCurriculumModal,
       showAboutModal,
-      sendEmail
+      sendEmail,
+      downloadCV,
+      changeLanguage,
+      locale
     }
   }
 }
