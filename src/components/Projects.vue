@@ -114,58 +114,51 @@ export default {
         id: 1,
         title: 'Gestión de vehículos - Tunateca Balfegó Espai Gastronòmic',
         description: 'Primera versión de un panel de control de parking con entradas, salidas, grupos, usuarios, vehículos y restricciones varias...',
-        videoUrl: 'https://player.vimeo.com/video/1106698573',
+        videoUrl: 'https://www.youtube.com/watch?v=iKMr7KzWTqo',
         tags: ['Laravel', 'Vue.js', 'MySQL']
       },
       {
         id: 2,
         title: 'Plataforma de desvios - Top Doctors',
         description: 'Segunda versión de un panel de gestión de pacientes y doctores con gestión de teléfono, descansos, consultas, estadísticas...',
-        videoUrl: 'https://player.vimeo.com/video/1106698589',
+        videoUrl: 'https://www.youtube.com/watch?v=e4ZVUWszftI',
         tags: ['Laravel', 'Vue.js', 'MySQL']
       },
       {
         id: 3,
         title: 'Flowchart',
         description: 'Visualiza tus ideas con Vue Flow, un diagrama de flujo Vue3 altamente personalizable... El componente Vue 3 personalizable que aporta interactividad a los diagramas de flujo y gráficos.',
-        videoUrl: 'https://player.vimeo.com/video/1106698580',
+        videoUrl: 'https://www.youtube.com/watch?v=VU2SpM62Yns',
         tags: ['Vue.js', 'Bootstrap', 'CSS']
       },
       {
         id: 4,
-        title: 'Blog CMS',
-        description: 'Sistema de gestión de contenidos para blogs con editor WYSIWYG y SEO optimizado.',
-        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
-        tags: ['Laravel', 'PHP', 'MySQL']
-      },
-      {
-        id: 5,
-        title: 'Weather App',
-        description: 'Aplicación del clima con geolocalización y pronósticos extendidos.',
-        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
-        tags: ['JavaScript', 'API', 'CSS']
-      },
-      {
-        id: 6,
-        title: 'Chat Application',
-        description: 'Aplicación de chat en tiempo real con salas privadas y públicas.',
-        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        title: 'Chat Application - Daily.co',
+        description: 'Aplicación de videochat en tiempo real con salas privadas y públicas.',
+        videoUrl: 'https://www.youtube.com/watch?v=zqzoL0Xm-K4',
         tags: ['Node.js', 'Socket.io', 'Vue.js']
       },
       {
-        id: 7,
-        title: 'Inventory System',
-        description: 'Sistema de inventario para pequeñas empresas con reportes y alertas.',
-        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
+        id: 5,
+        title: 'CRM Peluqueria - Byjesi',
+        description: 'CRM para gestión de citas, clientes y más en peluquerías y centros de estética.',
+        videoUrl: '',
         tags: ['Laravel', 'Vue.js', 'MySQL']
       },
       {
-        id: 8,
-        title: 'Social Media Dashboard',
-        description: 'Dashboard para gestión de redes sociales con analytics y programación de posts.',
-        videoUrl: 'https://player.vimeo.com/video/76979871?h=8272103f6e',
-        tags: ['React', 'Node.js', 'API']
-      }
+        id: 6,
+        title: 'No disponible',
+        description: 'Este proyecto no está disponible actualmente debido a que se encuentra en fase de desarrollo.',
+        videoUrl: '',
+        tags: ['Laravel', 'MySQL']
+      },
+      {
+        id: 7,
+        title: 'No disponible',
+        description: 'Este proyecto no está disponible actualmente debido a que se encuentra en fase de desarrollo.',
+        videoUrl: '',
+        tags: ['Node.js', 'MongoDB']
+      },
     ])
     
     /**

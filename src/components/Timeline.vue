@@ -190,7 +190,7 @@ export default {
       {
         title: 'Desarrollador Web',
         company: 'Netcom Comunicaciones S.L.',
-        period: '2023 - Presente',
+        period: '2023 - 2025',
         desc: 'Desarrollador web dedicado a crear aplicaciones desde cero para clientes. Desarrollando diagramas, wireframes, documentación interna y externa, la parte frontal y la parte trasera de cada aplicación.',
         learnings: [
           'HTML5',
