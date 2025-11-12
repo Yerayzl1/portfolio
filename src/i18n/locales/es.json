@@ -78,9 +78,9 @@
     "moreInfo": "Más Info",
     "cvModal": {
       "title": "Descargar Currículum",
-      "selectLanguage": "Seleccionar idioma:",
-      "spanish": "Español",
-      "english": "Inglés"
+      "description": "Seleccionar idioma:",
+      "downloadSpanish": "Español",
+      "downloadEnglish": "Inglés"
     },
     "aboutModal": {
       "title": "Más sobre mí",

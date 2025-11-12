@@ -82,9 +82,9 @@
     "moreInfo": "More Info",
     "cvModal": {
       "title": "Download Resume",
-      "selectLanguage": "Select the resume language:",
-      "spanish": "Spanish",
-      "english": "English"
+      "description": "Select the resume language:",
+      "downloadSpanish": "Spanish",
+      "downloadEnglish": "English"
     },
     "aboutModal": {
       "title": "More about me",
