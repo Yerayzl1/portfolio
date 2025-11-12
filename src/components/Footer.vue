@@ -96,14 +96,14 @@
               <a 
                 href="#" 
                 class="btn btn-success"
-                download="CV_Yeray_Zafra_ES.pdf"
+                download="CV-Yeray-Zafra-ES.pdf"
               >
                 <span class="me-2">🇪🇸</span>{{ $t('footer.cvModal.downloadSpanish') }}
               </a>
               <a 
                 href="#" 
                 class="btn btn-outline-success"
-                download="CV_Yeray_Zafra_EN.pdf"
+                download="CV-Yeray-Zafra-EN.pdf"
               >
                 <span class="me-2">🇬🇧</span>{{ $t('footer.cvModal.downloadEnglish') }}
               </a>
