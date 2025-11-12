@@ -7,7 +7,7 @@
 
 ## 📋 Descripción
 
-Portfolio web personal moderno y responsive desarrollado con **Vue 3** (Composition API), **Bootstrap 5.3** y **Vite**. Presenta de manera profesional y atractiva las habilidades, proyectos, experiencia y información personal de Yeray Zafra, desarrollador Full Stack.
+Portfolio web personal moderno y responsive desarrollado con **Vue 3** (Composition API), **Bootstrap 5.3** y **Vite**. Presenta de manera profesional y atractiva las habilidades, proyectos, experiencia y información personal de Yeray Zafra, desarrollador web.
 
 ### ✨ Características Destacadas
 - 🎨 **Diseño moderno** con animaciones CSS y JavaScript
@@ -482,7 +482,7 @@ export default defineConfig({
 
 ### 📈 Experiencia (Timeline)
 - **Experiencia Laboral**:
-  - Desarrollador Full Stack (2022-presente)
+  - Desarrollador web (2022-presente)
   - Desarrollador Frontend Junior (2021-2022)
 - **Estudios**:
   - Desarrollo de aplicaciones web
@@ -790,7 +790,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 📞 Contacto
 
-**Yeray Zafra** - Desarrollador Full Stack
+**Yeray Zafra** - Desarrollador web
 
 - 📧 Email: [management@yerayzafra.com](mailto:management@yerayzafra.com)
 - 💼 LinkedIn: [Perfil de LinkedIn]

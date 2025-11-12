@@ -160,8 +160,8 @@ scrollToTop() {
 const typewriterEffect = () => {
   const words = computed(() => {
     return locale.value === 'es' 
-      ? ['desarrollador full stack', 'creativo', 'innovador']
-      : ['full stack developer', 'creative', 'innovative']
+      ? ['desarrollador web', 'creativo', 'innovador']
+      : ['web developer', 'creative', 'innovative']
   })
   
   const currentWordIndex = ref(0)
@@ -524,7 +524,7 @@ data() {
     experiences: [
       {
         id: 1,
-        title: "Desarrollador Full Stack",
+        title: "Desarrollador web",
         company: "Tech Solutions",
         period: "2022 - Presente",
         description: "Desarrollo de aplicaciones web...",

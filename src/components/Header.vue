@@ -128,8 +128,8 @@ export default {
     // Palabras del typewriter según el idioma
     const words = computed(() => {
       return locale.value === 'es' 
-        ? ['desarrollador web.', 'full stack developer.', 'programador.']
-        : ['web developer.', 'full stack developer.', 'programmer.']
+        ? ['desarrollador web.', ' web developer.', 'programador.']
+        : ['web developer.', 'web developer.', 'programmer.']
     })
     
     let currentWordIndex = 0

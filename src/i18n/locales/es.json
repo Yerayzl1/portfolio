@@ -11,7 +11,7 @@
   "header": {
     "greeting": "Hola, soy",
     "name": "Yeray Zafra",
-    "description": "Desarrollador Full Stack apasionado por crear soluciones web innovadoras y eficientes.",
+    "description": "Desarrollador web apasionado por crear soluciones web innovadoras y eficientes.",
     "soloProjects": "proyectos en solitario",
     "yearsProgramming": "años programando",
     "startButton": "EMPEZAR",
@@ -67,7 +67,7 @@
   },
   "footer": {
     "name": "Yeray Zafra",
-    "description": "Desarrollador Full Stack apasionado por crear soluciones web innovadoras y eficientes.",
+    "description": "Desarrollador web apasionado por crear soluciones web innovadoras y eficientes.",
     "quickLinks": "Enlaces Rápidos",
     "contact": "Contacto",
     "sendEmail": "Enviar un mail",
