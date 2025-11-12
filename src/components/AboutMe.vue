@@ -17,7 +17,7 @@
         <div class="col-lg-4 text-center mb-4 mb-lg-0">
           <div class="profile-image-container position-relative">
             <img 
-              src="https://via.placeholder.com/300x300/28a745/ffffff?text=YZ" 
+              src="../../public/fotoyeray.png" 
               alt="Yeray Zafra" 
               class="profile-image img-fluid rounded-circle"
               @click="openContactModal"
