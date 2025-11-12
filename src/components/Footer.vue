@@ -91,21 +91,21 @@
             <div class="mb-4">
               <i class="bi bi-file-earmark-pdf text-success" style="font-size: 4rem;"></i>
             </div>
-            <h6 class="mb-3">{{ $t('footer.cvModal.selectLanguage') }}</h6>
+            <h6 class="mb-3">{{ $t('footer.cvModal.description') }}</h6>
             <div class="d-flex justify-content-center gap-3">
               <a 
                 href="#" 
                 class="btn btn-success"
                 download="CV_Yeray_Zafra_ES.pdf"
               >
-                <span class="me-2">🇪🇸</span>{{ $t('footer.cvModal.spanish') }}
+                <span class="me-2">🇪🇸</span>{{ $t('footer.cvModal.downloadSpanish') }}
               </a>
               <a 
                 href="#" 
                 class="btn btn-outline-success"
                 download="CV_Yeray_Zafra_EN.pdf"
               >
-                <span class="me-2">🇬🇧</span>{{ $t('footer.cvModal.english') }}
+                <span class="me-2">🇬🇧</span>{{ $t('footer.cvModal.downloadEnglish') }}
               </a>
             </div>
           </div>
@@ -139,13 +139,13 @@
             <div class="row">
               <div class="col-md-4 text-center mb-4">
                 <img 
-                  src="https://via.placeholder.com/200x200/28a745/ffffff?text=YZ" 
+                  src="../../public/fotoyeray.png" 
                   alt="Yeray Zafra" 
                   class="img-fluid rounded-circle mb-3"
                   style="width: 150px; height: 150px; object-fit: cover;"
                 />
                 <h6 class="text-success">Yeray Zafra Lora</h6>
-                <p class="text-muted">Full Stack Developer</p>
+                <p class="text-muted">Web Developer</p>
               </div>
               
               <div class="col-md-8">
@@ -159,9 +159,9 @@
                   {{ $t('footer.aboutModal.philosophyText') }}
                 </p>
                 
-                <h6 class="text-success mb-3">{{ $t('footer.aboutModal.goals') }}</h6>
+                <h6 class="text-success mb-3">{{ $t('footer.aboutModal.whenNotCoding') }}</h6>
                 <p class="mb-0">
-                  {{ $t('footer.aboutModal.goalsText') }}
+                  {{ $t('footer.aboutModal.hobbiesText') }}
                 </p>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default {
     
     const downloadCV = (language) => {
       // Placeholder para descarga de CV en el idioma seleccionado
-      const languageName = language === 'es' ? t('footer.cvModal.spanish') : t('footer.cvModal.english')
+      const languageName = language === 'es' ? t('footer.cvModal.downloadSpanish') : t('footer.cvModal.downloadEnglish')
       alert(t('footer.cvModal.downloadAlert', { language: languageName }))
       
       // Cerrar modal
