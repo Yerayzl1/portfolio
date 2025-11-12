@@ -114,50 +114,50 @@ export default {
         id: 1,
         title: 'Gestión de vehículos - Tunateca Balfegó Espai Gastronòmic',
         description: 'Primera versión de un panel de control de parking con entradas, salidas, grupos, usuarios, vehículos y restricciones varias...',
-        videoUrl: 'https://www.youtube.com/watch?v=iKMr7KzWTqo',
+        videoUrl: 'https://www.youtube.com/embed/iKMr7KzWTqo?si=b1D1C9VVdpfhFuDT',
         tags: ['Laravel', 'Vue.js', 'MySQL']
       },
       {
         id: 2,
         title: 'Plataforma de desvios - Top Doctors',
         description: 'Segunda versión de un panel de gestión de pacientes y doctores con gestión de teléfono, descansos, consultas, estadísticas...',
-        videoUrl: 'https://www.youtube.com/watch?v=e4ZVUWszftI',
+        videoUrl: 'https://www.youtube.com/embed/e4ZVUWszftI?si=wdh-b8zwYnR30YRk',
         tags: ['Laravel', 'Vue.js', 'MySQL']
       },
       {
         id: 3,
         title: 'Flowchart',
         description: 'Visualiza tus ideas con Vue Flow, un diagrama de flujo Vue3 altamente personalizable... El componente Vue 3 personalizable que aporta interactividad a los diagramas de flujo y gráficos.',
-        videoUrl: 'https://www.youtube.com/watch?v=VU2SpM62Yns',
+        videoUrl: 'https://www.youtube.com/embed/VU2SpM62Yns?si=gFwC1XpYVUh3NT04',
         tags: ['Vue.js', 'Bootstrap', 'CSS']
       },
       {
         id: 4,
         title: 'Chat Application - Daily.co',
         description: 'Aplicación de videochat en tiempo real con salas privadas y públicas.',
-        videoUrl: 'https://www.youtube.com/watch?v=zqzoL0Xm-K4',
+        videoUrl: 'https://www.youtube.com/embed/zqzoL0Xm-K4?si=QowSBB3J3D1ADJBE',
         tags: ['Node.js', 'Socket.io', 'Vue.js']
       },
       {
         id: 5,
         title: 'CRM Peluqueria - Byjesi',
         description: 'CRM para gestión de citas, clientes y más en peluquerías y centros de estética.',
-        videoUrl: '',
+        videoUrl: 'https://www.youtube.com/embed/eZoYCEu42Ys?si=o1-ffgTIQB_Zj-P-',
         tags: ['Laravel', 'Vue.js', 'MySQL']
       },
       {
         id: 6,
-        title: 'No disponible',
-        description: 'Este proyecto no está disponible actualmente debido a que se encuentra en fase de desarrollo.',
-        videoUrl: '',
-        tags: ['Laravel', 'MySQL']
+        title: 'NP8 - Node.js Project',
+        description: 'Este proyecto no dispone de parte visual. Es una API RESTful para gestión de recursos.',
+        videoUrl: 'https://cdnl.iconscout.com/lottie/premium/preview-watermark/frontend-developer-animation-gif-download-3017318.mp4',
+        tags: ['Node.js', 'MongoDB']
       },
       {
         id: 7,
-        title: 'No disponible',
+        title: 'Bienes Raíces - Laravel Project',
         description: 'Este proyecto no está disponible actualmente debido a que se encuentra en fase de desarrollo.',
-        videoUrl: '',
-        tags: ['Node.js', 'MongoDB']
+        videoUrl: 'https://cdnl.iconscout.com/lottie/premium/preview-watermark/frontend-developer-animation-gif-download-3017318.mp4',
+        tags: ['Laravel', 'MySQL']
       },
     ])
     
